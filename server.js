@@ -22,8 +22,8 @@ app.use((req, res, next) => {
     next();
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-    console.log(`Uploads directory: ${uploadsDir}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
+
